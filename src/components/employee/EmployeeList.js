@@ -5,7 +5,7 @@ class EmployeeList extends Component {
             <article>
                 <h1>Employee List</h1>
               {this.props.employees.map((employee) => {
-                 return <p key={employee.id}>{employee.name}</p>
+                 return <p key={employee.id}>{employee.name}<button className ="deleteEmployeeButton" onClick={() => this.props.deleteEmployee(employee.id)}>you're fired</button></p>
               })}
             </article>
         );
