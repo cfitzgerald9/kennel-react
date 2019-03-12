@@ -23,8 +23,8 @@ export default class AnimalList extends Component {
                     <div key={animal.id} className="card">
                         <div className="card-body">
                             <h5 className="card-title">
-                                <img src={dog} className="icon--dog" />
-                                <p>{animal.name}</p> <p>{this.props.species.find(speciesParam => speciesParam.id === animal.speciesId).type}</p>
+
+                                <p>{animal.name}</p> <p>{this.props.species.find(speciesParam => speciesParam.id === animal.speciesId).type}</p><img src={this.props.species.find(speciesParam => speciesParam.id === animal.speciesId).icon} className="icon" />
                                 <Link className="nav-link" to={`/animals/${animal.id}`}>More Details</Link>
                                 <a href="#"
                                     onClick={() => this.props.deleteAnimal(animal.id)}

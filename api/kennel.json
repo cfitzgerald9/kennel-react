@@ -2,11 +2,13 @@
   "species": [
     {
       "id": 1,
-      "type": "cat"
+      "type": "cat",
+      "icon": "https://cdn2.iconfinder.com/data/icons/halloween-8/48/Black-Cat-512.png"
     },
     {
       "id": 2,
-      "type": "dog"
+      "type": "dog",
+      "icon": "https://www.shareicon.net/download/2016/01/16/704330_pet_512x512.png"
     },
     {
       "id": 3,
@@ -31,7 +33,7 @@
     {
       "id": 4,
       "name": "Blaise Roberts",
-      "title":"Vet"
+      "title": "Vet"
     },
     {
       "name": "Johnny Walker",
@@ -84,6 +86,13 @@
       "speciesId": 4,
       "employeeId": 4,
       "id": 14
+    },
+    {
+      "name": "barty",
+      "breed": "russian blue",
+      "speciesId": 1,
+      "employeeId": 6,
+      "id": 15
     }
   ],
   "owners": [

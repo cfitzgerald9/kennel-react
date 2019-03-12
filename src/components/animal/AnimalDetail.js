@@ -18,7 +18,7 @@ export default class AnimalDetail extends Component {
                 <div key={animal.id} className="card">
                     <div className="card-body">
                         <h4 className="card-title">
-                            <img src={dog} className="icon--dog" />
+                            <img src={this.props.species.find(speciesParam => speciesParam.id === animal.speciesId).icon} className="icon" />
                             {animal.name}
                         </h4>
                         <div>
