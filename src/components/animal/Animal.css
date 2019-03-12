@@ -2,6 +2,10 @@
     display: flex;
     justify-content: space-evenly;
 }
+.employees {
+    display: flex;
+    justify-content: space-evenly;
+}
 
 .icon--dog {
     width: 50px;
@@ -24,6 +28,11 @@
     font-size: 0.7em;
 }
 .animalButton {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 0 10px 0;
+  }
+  .employeeButton {
     display: flex;
     justify-content: space-evenly;
     margin: 0 0 10px 0;

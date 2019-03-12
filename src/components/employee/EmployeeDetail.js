@@ -15,6 +15,7 @@ export default class EmployeeDetail extends Component {
             <section className="employee">
                 <div key={employee.id} className="card">
                     <div className="card-body">
+                    <h3>{employee.name}</h3>
                         <h6 className="card-title">{employee.title}</h6>
                         <a href="#"
                             onClick={() => this.props.deleteEmployee(employee.id)

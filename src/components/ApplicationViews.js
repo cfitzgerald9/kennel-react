@@ -9,8 +9,10 @@ import EmployeeManager from '../modules/EmployeeManager'
 import OwnerManager from '../modules/OwnerManager'
 import LocationManager from '../modules/LocationManager'
 import AnimalDetail from './animal/AnimalDetail'
+import EmployeeDetail from './employee/EmployeeDetail'
 import SpeciesManager from '../modules/SpeciesManager';
 import AnimalForm from './animal/AnimalForm'
+import EmployeeForm from './employee/EmployeeForm'
 
 
 class ApplicationViews extends Component {
@@ -48,13 +50,21 @@ class ApplicationViews extends Component {
                 employees: employees
             })
             )
-    }
+    };
     addAnimal = animal =>
         AnimalManager.post(animal)
             .then(() => AnimalManager.getAll())
             .then(animals =>
                 this.setState({
                     animals: animals
+                })
+            );
+    addEmployee = employee =>
+        EmployeeManager.post(employee)
+            .then(() => EmployeeManager.getAll())
+            .then(employees =>
+                this.setState({
+                    employees: employees
                 })
             );
 
@@ -89,7 +99,7 @@ class ApplicationViews extends Component {
             <div className="container-div">
                 <Route exact path="/" render={(props) => {
                     return <LocationList
-                    locations={this.state.locations} />
+                        locations={this.state.locations} />
                 }} />
                 <Route exact path="/animals" render={(props) => {
                     return <AnimalList {...props}
@@ -105,20 +115,31 @@ class ApplicationViews extends Component {
                 }} />
                 <Route path="/animals/:animalId(\d+)" render={(props) => {
                     return <AnimalDetail {...props}
-                    deleteAnimal={this.deleteAnimal}
-                    animals={this.state.animals}
-                    species={this.state.species}
-                    employees={this.state.employees} />
+                        deleteAnimal={this.deleteAnimal}
+                        animals={this.state.animals}
+                        species={this.state.species}
+                        employees={this.state.employees} />
                 }} />
-                <Route path="/employees" render={(props) => {
-                    return <EmployeeList
-                    employees={this.state.employees}
-                    deleteEmployee={this.deleteEmployee} />
+                <Route exact path="/employees" render={(props) => {
+                    return <EmployeeList {...props}
+                        employees={this.state.employees}
+                        deleteEmployee={this.deleteEmployee} />
                 }} />
+                <Route path="/employees/:employeeId(\d+)" render={(props) => {
+                    return <EmployeeDetail {...props}
+                        deleteEmployee={this.deleteEmployee}
+                        employees={this.state.employees} />
+                }} />
+                <Route path="/employees/new" render={(props) => {
+                    return <EmployeeForm {...props}
+                        addEmployee={this.addEmployee}
+                        employees={this.state.employees} />
+                }} />
+
                 <Route path="/owners" render={(props) => {
                     return <OwnerList
-                    owners={this.state.owners}
-                    deleteOwner={this.deleteOwner} />
+                        owners={this.state.owners}
+                        deleteOwner={this.deleteOwner} />
                 }} />
             </div>
         )

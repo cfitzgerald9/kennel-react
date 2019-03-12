@@ -20,15 +20,33 @@
   "employees": [
     {
       "id": 1,
-      "name": "Jessica Younker"
+      "name": "Jessica Younker",
+      "title": "Vet's Assistant"
     },
     {
       "id": 2,
-      "name": "Jordan Nelson"
+      "name": "Jordan Nelson",
+      "title": "Receptionist"
     },
     {
       "id": 4,
-      "name": "Blaise Roberts"
+      "name": "Blaise Roberts",
+      "title":"Vet"
+    },
+    {
+      "name": "Johnny Walker",
+      "title": "Cat petter",
+      "id": 5
+    },
+    {
+      "name": "Sodapop Curtis",
+      "title": "Movie Star",
+      "id": 6
+    },
+    {
+      "name": "Tony Tiger",
+      "title": "being grrrrrrrrrrrreat",
+      "id": 7
     }
   ],
   "animals": [
