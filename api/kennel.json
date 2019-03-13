@@ -12,11 +12,13 @@
     },
     {
       "id": 3,
-      "type": "bird"
+      "type": "bird",
+      "icon": "https://cdn1.iconfinder.com/data/icons/birds/100/02-512.png"
     },
     {
       "id": 4,
-      "type": "rabbit"
+      "type": "rabbit",
+      "icon":"https://cdn1.iconfinder.com/data/icons/mammals-i/300/19-512.png"
     }
   ],
   "employees": [
