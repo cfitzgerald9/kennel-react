@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from "react-router-dom";
+import AnimalCard from '../animal/AnimalCard'
 class EmployeeList extends Component {
     render () {
         return (
@@ -20,6 +21,14 @@ class EmployeeList extends Component {
                         <div className="card-body">
                             <h5 className="card-title">
                                 <p>{employee.name}</p> <p>{employee.title}</p>
+                                <section>
+                                    {this.props.animals.filter(animal => animal.employeeId === employee.id).map(matchingAnimal =>
+                                    <AnimalCard
+                                    {...this.props}
+                                    key={matchingAnimal.id}
+                                    animal={matchingAnimal}
+                                    /> )}
+                                </section>
                                 <Link className="btn btn-info" to={`/employees/${employee.id}`}>More Details</Link>
                                 <button
                                     onClick={() => this.props.deleteEmployee(employee.id)}

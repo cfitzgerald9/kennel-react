@@ -4,9 +4,9 @@ class OwnerList extends Component {
         return (
             <article className="card">
 
-                <h3 class="card-title">Owner Contact</h3>
+                <h3 className="card-title">Owner Contact</h3>
               {this.props.owners.map((owner) => {
-                 return <div key={owner.id} class="card-body"><p>{owner.name}</p><p>Phone: {owner.phone}</p><button className="deleteOwnerButton" onClick={() => this.props.deleteOwner(owner.id)}>Delete Owner</button>
+                 return <div key={owner.id} className="card-body"><p>{owner.name}</p><p>Phone: {owner.phone}</p><button className="deleteOwnerButton" onClick={() => this.props.deleteOwner(owner.id)}>Delete Owner</button>
                  <hr></hr>
                  </div>
               })}

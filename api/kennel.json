@@ -31,7 +31,7 @@
     {
       "id": 2,
       "name": "Jordan Nelson",
-      "title": "Receptionist"
+      "title": "Owner"
     },
     {
       "id": 4,
@@ -49,9 +49,9 @@
       "id": 6
     },
     {
+      "id": 7,
       "name": "Tony Tiger",
-      "title": "being grrrrrrrrrrrreat",
-      "id": 7
+      "title": "being grrreat"
     }
   ],
   "animals": [
@@ -63,25 +63,11 @@
       "speciesId": 1
     },
     {
-      "name": "Taco",
-      "breed": "Chihuhua",
-      "speciesId": 2,
-      "employeeId": 5,
-      "id": 2
-    },
-    {
+      "id": 3,
       "name": "Jazz",
       "breed": "Jackrabbit",
-      "speciesId": 4,
-      "employeeId": 2,
-      "id": 3
-    },
-    {
-      "name": "Pablo",
-      "breed": "Penguin",
-      "speciesId": 3,
-      "employeeId": 6,
-      "id": 4
+      "employeeId": 7,
+      "speciesId": 4
     }
   ],
   "owners": [
