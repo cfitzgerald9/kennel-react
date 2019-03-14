@@ -26,32 +26,38 @@
     {
       "id": 1,
       "name": "Jessica Younker",
-      "title": "Vet's Assistant"
+      "title": "Vet's Assistant",
+      "locationId" : 1
     },
     {
       "id": 2,
       "name": "Jordan Nelson",
-      "title": "Owner"
+      "title": "Owner",
+      "locationId" : 2
     },
     {
       "id": 4,
       "name": "Blaise Roberts",
-      "title": "Vet"
+      "title": "Vet",
+      "locationId" : 1
     },
     {
       "name": "Johnny Walker",
       "title": "Cat petter",
-      "id": 5
+      "id": 5,
+      "locationId" : 1
     },
     {
       "name": "Sodapop Curtis",
       "title": "Movie Star",
-      "id": 6
+      "id": 6,
+      "locationId" : 1
     },
     {
       "id": 7,
       "name": "Tony Tiger",
-      "title": "being grrreat"
+      "title": "being grrreat",
+      "locationId" : 2
     }
   ],
   "animals": [

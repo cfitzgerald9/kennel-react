@@ -17,7 +17,7 @@ export default class Login extends Component {
 
     // Simplistic handler for login submit
     handleLogin = (e) => {
-        e.preventDefault()
+        e.preventDefault();
         sessionStorage.setItem(
             "credentials",
             JSON.stringify({
@@ -25,11 +25,12 @@ export default class Login extends Component {
                 password: this.state.password
             })
         )
+        this.props.history.push("/")
     }
 
   render(){
         return (
-            <form onSubmit={this.handleLogin}>
+            <form onSubmit={this.handleLogin }>
                 <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
                 <label htmlFor="inputEmail">
                     Email address
@@ -45,7 +46,7 @@ export default class Login extends Component {
                        id="password"
                        placeholder="Password"
                        required="" />
-                <button type="submit">
+                <button type="submit" >
                     Sign in
                 </button>
             </form>

@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import AnimalCard from "../animal/AnimalCard"
 
 
 
@@ -24,6 +25,14 @@ export default class EmployeeDetail extends Component {
                             onClick={() => {
                                 this.props.history.push(`/employees/${employee.id}/edit`);
                             }}>Edit</button>
+                              <section> Current animals in care:
+                                    {this.props.animals.filter(animal => animal.employeeId === employee.id).map(matchingAnimal =>
+                                    <AnimalCard
+                                    {...this.props}
+                                    key={matchingAnimal.id}
+                                    animal={matchingAnimal}
+                                    /> )}
+                                </section>
                     </div>
                 </div>
             </section>

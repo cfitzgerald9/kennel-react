@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import { Link } from "react-router-dom";
-import AnimalCard from '../animal/AnimalCard'
+import EmployeeCard from "./EmployeeCard"
+
 class EmployeeList extends Component {
     render () {
         return (
@@ -15,31 +15,14 @@ class EmployeeList extends Component {
                     </button>
                 </div>
                 <section className="employees">
-                {
-                this.props.employees.map(employee =>
-                    <div key={employee.id} className="card">
-                        <div className="card-body">
-                            <h5 className="card-title">
-                                <p>{employee.name}</p> <p>{employee.title}</p>
-                                <section>
-                                    {this.props.animals.filter(animal => animal.employeeId === employee.id).map(matchingAnimal =>
-                                    <AnimalCard
-                                    {...this.props}
-                                    key={matchingAnimal.id}
-                                    animal={matchingAnimal}
-                                    /> )}
-                                </section>
-                                <Link className="btn btn-info" to={`/employees/${employee.id}`}>More Details</Link>
-                                <button
-                                    onClick={() => this.props.deleteEmployee(employee.id)}
-                                    className="btn btn-danger">Fire</button>
-                            </h5>
-                        </div>
-                    </div>
+                {this.props.employees.map(singleEmployee =>
+                    <EmployeeCard {...this.props}
+                    key={singleEmployee.id}
+                    employee={singleEmployee}
+                    />
                 )
             }
             </section>
-
             </React.Fragment>
         )
         }}

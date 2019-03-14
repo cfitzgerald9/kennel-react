@@ -17,6 +17,16 @@
     align-items: center;
     flex-direction: column;
 }
+.employeeLocations{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+}
+.locationHeading{
+    text-align: center;
+    margin-top: 4rem
+}
 
 .card-link {
     margin: 12px 0 0 0;
@@ -37,4 +47,8 @@
     height: 50px;}
 a{
     margin-top:1rem
+}
+h1{
+        text-align: center;
+        margin-top: 4rem
 }
