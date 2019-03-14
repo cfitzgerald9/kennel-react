@@ -20,16 +20,17 @@ class EmployeeList extends Component {
                         <div className="card-body">
                             <h5 className="card-title">
                                 <p>{employee.name}</p> <p>{employee.title}</p>
-                                <Link className="nav-link" to={`/employees/${employee.id}`}>More Details</Link>
-                                <a href="#"
+                                <Link className="btn btn-info" to={`/employees/${employee.id}`}>More Details</Link>
+                                <button
                                     onClick={() => this.props.deleteEmployee(employee.id)}
-                                    className="card-link">Fire</a>
+                                    className="btn btn-danger">Fire</button>
                             </h5>
                         </div>
                     </div>
                 )
             }
             </section>
+
             </React.Fragment>
         )
         }}

@@ -15,6 +15,7 @@ import AnimalForm from './animal/AnimalForm'
 import EmployeeForm from './employee/EmployeeForm'
 import Login from './authentication/Login'
 import AnimalEditForm from './animal/AnimalEditForm'
+import EmployeeEditForm from './employee/EmployeeEditForm'
 
 
 
@@ -106,6 +107,15 @@ class ApplicationViews extends Component {
           })
         });
       };
+      updateEmployee = (editedEmployeeObject) => {
+        return EmployeeManager.put(editedEmployeeObject)
+        .then(() => EmployeeManager.getAll())
+        .then(employees => {
+          this.setState({
+            employees: employees
+          })
+        });
+      };
 
 
     render() {
@@ -155,6 +165,13 @@ class ApplicationViews extends Component {
                         species={this.state.species} />
                     }}
                 />
+                  <Route
+                    path="/employees/:employeeId(\d+)/edit" render={props => {
+                        return <EmployeeEditForm {...props}
+                        employees={this.state.employees}
+                        updateEmployee ={this.updateEmployee}/>
+                    }}
+                />
 
                 <Route exact path="/employees" render={props => {
                     if (this.isAuthenticated()) {
@@ -164,7 +181,7 @@ class ApplicationViews extends Component {
                         return <Redirect to="/login" />
                     }
                 }} />
-                <Route path="/employees/:employeeId(\d+)" render={(props) => {
+                <Route exact path="/employees/:employeeId(\d+)" render={(props) => {
                     if (this.isAuthenticated()) {
                         return <EmployeeDetail {...props}
                             deleteEmployee={this.deleteEmployee}

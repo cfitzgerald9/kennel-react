@@ -8,7 +8,7 @@
 }
 
 .card {
-    width: 10rem;
+    width: 15rem;
 }
 
 .card-title {
@@ -35,3 +35,6 @@
 .icon{
     width: 50px;
     height: 50px;}
+a{
+    margin-top:1rem
+}

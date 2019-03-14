@@ -4,7 +4,7 @@
     {
       "id": 1,
       "type": "cat",
-      "icon": "https://cdn2.iconfinder.com/data/icons/halloween-8/48/Black-Cat-512.png"
+      "icon": "https://cdn4.iconfinder.com/data/icons/animals-57/500/cat_animal_-512.png"
     },
     {
       "id": 2,
@@ -56,46 +56,32 @@
   ],
   "animals": [
     {
-      "id": 10,
-      "name": "dirty birdie",
-      "breed": "flying rat",
-      "employeeId": 6,
-      "speciesId": 3
-    },
-    {
-      "id": 11,
-      "name": "oscar",
-      "breed": "tuxedo",
-      "employeeId": 4,
+      "id": 1,
+      "name": "Oscar",
+      "breed": "Tuxedo",
+      "employeeId": 5,
       "speciesId": 1
     },
     {
-      "name": "bertie",
-      "breed": "parrot",
-      "speciesId": 3,
+      "name": "Taco",
+      "breed": "Chihuhua",
+      "speciesId": 2,
+      "employeeId": 5,
+      "id": 2
+    },
+    {
+      "name": "Jazz",
+      "breed": "Jackrabbit",
+      "speciesId": 4,
       "employeeId": 2,
-      "id": 12
+      "id": 3
     },
     {
-      "name": "briar",
-      "breed": "bad",
-      "speciesId": 4,
-      "employeeId": 1,
-      "id": 13
-    },
-    {
-      "name": "ricky",
-      "breed": "dumb",
-      "speciesId": 4,
-      "employeeId": 4,
-      "id": 14
-    },
-    {
-      "name": "barty",
-      "breed": "russian blue",
-      "speciesId": 1,
+      "name": "Pablo",
+      "breed": "Penguin",
+      "speciesId": 3,
       "employeeId": 6,
-      "id": 15
+      "id": 4
     }
   ],
   "owners": [
