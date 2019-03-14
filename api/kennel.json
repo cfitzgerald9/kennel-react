@@ -1,34 +1,87 @@
 {
-  "employees": [
+  "users": [],
+  "species": [
     {
       "id": 1,
-      "name": "Jessica Younker"
+      "type": "cat",
+      "icon": "https://cdn4.iconfinder.com/data/icons/animals-57/500/cat_animal_-512.png"
     },
     {
       "id": 2,
-      "name": "Jordan Nelson"
+      "type": "dog",
+      "icon": "https://www.shareicon.net/download/2016/01/16/704330_pet_512x512.png"
+    },
+    {
+      "id": 3,
+      "type": "bird",
+      "icon": "https://cdn1.iconfinder.com/data/icons/birds/100/02-512.png"
     },
     {
       "id": 4,
-      "name": "Blaise Roberts"
+      "type": "rabbit",
+      "icon": "https://cdn1.iconfinder.com/data/icons/mammals-i/300/19-512.png"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Jessica Younker",
+      "title": "Vet's Assistant"
+    },
+    {
+      "id": 2,
+      "name": "Jordan Nelson",
+      "title": "Receptionist"
+    },
+    {
+      "id": 4,
+      "name": "Blaise Roberts",
+      "title": "Vet"
+    },
+    {
+      "name": "Johnny Walker",
+      "title": "Cat petter",
+      "id": 5
+    },
+    {
+      "name": "Sodapop Curtis",
+      "title": "Movie Star",
+      "id": 6
+    },
+    {
+      "name": "Tony Tiger",
+      "title": "being grrrrrrrrrrrreat",
+      "id": 7
     }
   ],
   "animals": [
     {
       "id": 1,
-      "name": "Doodles"
+      "name": "Oscar",
+      "breed": "Tuxedo",
+      "employeeId": 5,
+      "speciesId": 1
     },
     {
-      "id": 3,
-      "name": "Angus"
+      "name": "Taco",
+      "breed": "Chihuhua",
+      "speciesId": 2,
+      "employeeId": 5,
+      "id": 2
     },
     {
-      "id": 5,
-      "name": "Derkins"
+      "name": "Jazz",
+      "breed": "Jackrabbit",
+      "speciesId": 4,
+      "employeeId": 2,
+      "id": 3
     },
     {
-      "id": 6,
-      "name": "Checkers"
+      "name": "Pablo",
+      "breed": "Penguin",
+      "speciesId": 3,
+      "employeeId": 6,
+      "id": 4
     }
   ],
   "owners": [
@@ -75,21 +128,5 @@
       "address": "10101 Binary Court"
     }
   ],
-  "ownedAnimals": [
-    {
-      "id": 1,
-      "animalId": 6,
-      "ownerId": 3
-    },
-    {
-      "id": 4,
-      "animalId": 3,
-      "ownerId": 1
-    },
-    {
-      "id": 6,
-      "animalId": 1,
-      "ownerId": 6
-    }
-  ]
+  "ownedAnimals": []
 }
