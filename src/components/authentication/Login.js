@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-
+import { Redirect } from 'react-router';
 
 export default class Login extends Component {
 
@@ -19,11 +19,6 @@ export default class Login extends Component {
     // Simplistic handler for login submit
     handleLogin = (e) => {
         e.preventDefault()
-
-        /*
-            For now, just store the email and password that
-            the customer enters into local storage.
-        */
         sessionStorage.setItem(
             "credentials",
             JSON.stringify({
@@ -33,7 +28,7 @@ export default class Login extends Component {
         )
     }
 
-    render() {
+  render(){
         return (
             <form onSubmit={this.handleLogin}>
                 <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>

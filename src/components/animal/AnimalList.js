@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import dog from "./DogIcon.png"
 import "./Animal.css"
 import { Link } from "react-router-dom";
 

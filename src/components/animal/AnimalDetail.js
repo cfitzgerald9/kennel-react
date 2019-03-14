@@ -22,7 +22,6 @@ export default class AnimalDetail extends Component {
                             {animal.name}
                         </h4>
                         <div>
-
                         <h5>{this.props.species.find(speciesParam => speciesParam.id === animal.speciesId).type}</h5>
                         <h5>{animal.breed}</h5>
                         <h6>{this.props.employees.find(employee => employee.id === animal.employeeId).name} </h6>
@@ -30,6 +29,15 @@ export default class AnimalDetail extends Component {
                                 onClick={() => this.props.deleteAnimal(animal.id)
                                     .then(() => this.props.history.push("/animals"))}
                                 className="card-link">Delete</a>
+                            <button
+  type="button"
+  className="btn btn-success"
+  onClick={() => {
+    this.props.history.push(`/animals/${animal.id}/edit`);
+  }}
+>
+  Edit
+</button>
 
                         </div>
                     </div>
