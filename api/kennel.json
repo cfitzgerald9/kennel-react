@@ -27,37 +27,43 @@
       "id": 1,
       "name": "Jessica Younker",
       "title": "Vet's Assistant",
-      "locationId" : 1
+      "locationId": 2,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkwcfHQnzIZkBspc7_fFvoL_yHnOQ4gTdes1LJvb3PEarxmx8vjA"
     },
     {
       "id": 2,
       "name": "Jordan Nelson",
       "title": "Owner",
-      "locationId" : 2
+      "locationId": 1,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkwcfHQnzIZkBspc7_fFvoL_yHnOQ4gTdes1LJvb3PEarxmx8vjA"
     },
     {
       "id": 4,
       "name": "Blaise Roberts",
       "title": "Vet",
-      "locationId" : 1
+      "locationId": 1,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkwcfHQnzIZkBspc7_fFvoL_yHnOQ4gTdes1LJvb3PEarxmx8vjA"
     },
     {
+      "id": 5,
       "name": "Johnny Walker",
       "title": "Cat petter",
-      "id": 5,
-      "locationId" : 1
+      "locationId": 1,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkwcfHQnzIZkBspc7_fFvoL_yHnOQ4gTdes1LJvb3PEarxmx8vjA"
     },
     {
+      "id": 6,
       "name": "Sodapop Curtis",
       "title": "Movie Star",
-      "id": 6,
-      "locationId" : 1
+      "locationId": 2,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkwcfHQnzIZkBspc7_fFvoL_yHnOQ4gTdes1LJvb3PEarxmx8vjA"
     },
     {
       "id": 7,
       "name": "Tony Tiger",
       "title": "being grrreat",
-      "locationId" : 2
+      "locationId": 2,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkwcfHQnzIZkBspc7_fFvoL_yHnOQ4gTdes1LJvb3PEarxmx8vjA"
     }
   ],
   "animals": [
@@ -66,58 +72,103 @@
       "name": "Oscar",
       "breed": "Tuxedo",
       "employeeId": 5,
-      "speciesId": 1
+      "speciesId": 1,
+      "image": "https://cdn4.iconfinder.com/data/icons/animals-57/500/cat_animal_-512.png"
     },
     {
       "id": 3,
       "name": "Jazz",
       "breed": "Jackrabbit",
       "employeeId": 7,
-      "speciesId": 4
+      "speciesId": 4,
+      "image": "https://cdn1.iconfinder.com/data/icons/mammals-i/300/19-512.png"
+    },
+    {
+      "id": 4,
+      "name": "Bart",
+      "breed": "Beagle",
+      "employeeId": 2,
+      "speciesId": 2,
+      "image": "https://www.shareicon.net/download/2016/01/16/704330_pet_512x512.png"
+    },
+    {
+      "id": 5,
+      "name": "Dottie",
+      "breed": "Parrot",
+      "employeeId": 2,
+      "speciesId": 3,
+      "image": "https://cdn1.iconfinder.com/data/icons/birds/100/02-512.png"
+    },
+    {
+      "name": "ernie",
+      "breed": "russian blue",
+      "speciesId": 1,
+      "employeeId": 2,
+      "id": 6
     }
   ],
   "owners": [
     {
       "id": 1,
       "name": "Ryan",
-      "phone": "32231213231"
+      "phone": "32231213231",
+      "email": "ryan@mememaster.com",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkwcfHQnzIZkBspc7_fFvoL_yHnOQ4gTdes1LJvb3PEarxmx8vjA"
     },
     {
       "id": 2,
       "name": "Dale",
-      "phone": "231890321890"
+      "phone": "231890321890",
+      "email": "dale@mememaster.com",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkwcfHQnzIZkBspc7_fFvoL_yHnOQ4gTdes1LJvb3PEarxmx8vjA"
     },
     {
       "id": 3,
       "name": "Russ",
-      "phone": "90909090"
+      "phone": "90909090",
+      "email": "russ@mememaster.com",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkwcfHQnzIZkBspc7_fFvoL_yHnOQ4gTdes1LJvb3PEarxmx8vjA"
     },
     {
       "id": 5,
       "name": "Megan",
-      "phone": "9894755934"
+      "phone": "9894755934",
+      "email": "megan@mememaster.com",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkwcfHQnzIZkBspc7_fFvoL_yHnOQ4gTdes1LJvb3PEarxmx8vjA"
     },
     {
       "id": 6,
       "name": "Michelle",
-      "phone": "7347223498"
+      "phone": "7347223498",
+      "email": "michelle@mememaster.com",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkwcfHQnzIZkBspc7_fFvoL_yHnOQ4gTdes1LJvb3PEarxmx8vjA"
     },
     {
       "id": 7,
       "name": "Josh",
-      "phone": "900213231"
+      "phone": "900213231",
+      "email": "josh@mememaster.com",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkwcfHQnzIZkBspc7_fFvoL_yHnOQ4gTdes1LJvb3PEarxmx8vjA"
+    },
+    {
+      "name": "peter cottontail",
+      "phone": "8675309",
+      "email": "hopper4u@bunnytrail.com",
+      "id": 8
     }
   ],
   "locations": [
     {
       "id": 1,
       "name": "Nashville North",
-      "address": "500 Circle Way"
+      "address": "500 Circle Way",
+      "image": "https://vignette.wikia.nocookie.net/academicjobs/images/1/12/Placeholder_location.png/revision/latest?cb=20090204233831"
     },
     {
       "id": 2,
       "name": "Nashville South",
-      "address": "10101 Binary Court"
+      "address": "10101 Binary Court",
+      "image": "https://vignette.wikia.nocookie.net/academicjobs/images/1/12/Placeholder_location.png/revision/latest?cb=20090204233831"
     }
   ],
   "ownedAnimals": []

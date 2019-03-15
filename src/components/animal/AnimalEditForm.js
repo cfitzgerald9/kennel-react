@@ -7,7 +7,7 @@ export default class AnimalEditForm extends Component {
       animalName: "",
       breed: "",
       speciesId: "",
-      employeeId: ""
+      employeeId: "",
     }
 
 
@@ -28,7 +28,8 @@ export default class AnimalEditForm extends Component {
           name: this.state.animalName,
           breed: this.state.breed,
           employeeId: parseInt(this.state.employeeId),
-          speciesId: parseInt(this.state.speciesId)
+          speciesId: parseInt(this.state.speciesId),
+          image:this.state.image
         };
 
     this.props.updateAnimal(editedAnimal)
@@ -43,7 +44,8 @@ export default class AnimalEditForm extends Component {
           animalName: animal.name,
           breed: animal.breed,
           employeeId: animal.employeeId,
-          speciesId: animal.speciesId
+          speciesId: animal.speciesId,
+          image: animal.image
         });
       });
     }

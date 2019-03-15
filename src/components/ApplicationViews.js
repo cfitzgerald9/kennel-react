@@ -1,9 +1,6 @@
 import { Route, Redirect } from 'react-router-dom'
 import React, { Component } from "react"
-import AnimalList from './animal/AnimalList'
 import LocationList from './location/LocationList'
-import EmployeeList from './employee/EmployeeList'
-import OwnerList from './owner/OwnerList'
 import AnimalManager from "../modules/AnimalManager"
 import EmployeeManager from '../modules/EmployeeManager'
 import OwnerManager from '../modules/OwnerManager'
@@ -16,6 +13,9 @@ import EmployeeForm from './employee/EmployeeForm'
 import Login from './authentication/Login'
 import AnimalEditForm from './animal/AnimalEditForm'
 import EmployeeEditForm from './employee/EmployeeEditForm'
+import OwnerDetail from './owner/OwnerDetail'
+import ResourceList from './generics/ResourceList'
+import OwnerForm from './owner/OwnerForm'
 
 
 
@@ -72,6 +72,14 @@ class ApplicationViews extends Component {
                     employees: employees
                 })
             );
+        addOwner = owner =>
+        OwnerManager.post(owner)
+            .then(() => OwnerManager.getAll())
+            .then(owners =>
+                this.setState({
+                    owners: owners
+                })
+            );
 
     deleteOwner = id => {
         return fetch(`http://localhost:5002/owners/${id}`, {
@@ -125,6 +133,7 @@ class ApplicationViews extends Component {
                 <Route exact path="/" render={(props) => {
                      if (this.isAuthenticated()) {
                     return <LocationList
+                    collection = "locations"
                         locations={this.state.locations}
                         employees={this.state.employees}
                         animals={this.state.animals}
@@ -135,10 +144,12 @@ class ApplicationViews extends Component {
                 }} />
                 <Route exact path="/animals" render={(props) => {
                     if (this.isAuthenticated()) {
-                        return <AnimalList {...props}
+                        return <ResourceList {...props}
+                        collection="animals"
                             deleteAnimal={this.deleteAnimal}
                             animals={this.state.animals}
-                            species={this.state.species} />
+                            species={this.state.species}
+                            resources={this.state.animals} />
                     } else {
                         return <Redirect to="/login" />
                     }
@@ -153,6 +164,15 @@ class ApplicationViews extends Component {
                         return <Redirect to="/login" />
                     }
                 }} />
+                  <Route path="/owners/new" render={(props) => {
+                    if (this.isAuthenticated()) {
+                        return <OwnerForm {...props}
+                            addOwner={this.addOwner}
+                            owners={this.state.owners} />
+                    } else {
+                        return <Redirect to="/login" />
+                    }
+                }} />
                 <Route exact path="/animals/:animalId(\d+)" render={(props) => {
                     if (this.isAuthenticated()) {
                         return <AnimalDetail {...props}
@@ -160,6 +180,15 @@ class ApplicationViews extends Component {
                             animals={this.state.animals}
                             species={this.state.species}
                             employees={this.state.employees}
+                             />
+                    } else {
+                        return <Redirect to="/login" />
+                    }
+                }} />
+                      <Route exact path="/owners/:ownerId(\d+)" render={(props) => {
+                    if (this.isAuthenticated()) {
+                        return <OwnerDetail {...props}
+                            owners={this.state.owners}
                              />
                     } else {
                         return <Redirect to="/login" />
@@ -183,8 +212,10 @@ class ApplicationViews extends Component {
 
                 <Route exact path="/employees" render={props => {
                     if (this.isAuthenticated()) {
-                        return <EmployeeList
+                        return <ResourceList
+                        collection="employees"
                         deleteEmployee={this.deleteEmployee}
+                        resources={this.state.employees}
                             employees={this.state.employees}
                             animals={this.state.animals}
                             species={this.state.species} />
@@ -213,11 +244,13 @@ class ApplicationViews extends Component {
                     }
                 }} />
 
-                <Route path="/owners" render={(props) => {
+                <Route exact path="/owners" render={(props) => {
                     if (this.isAuthenticated()) {
-                        return <OwnerList
-                            owners={this.state.owners}
-                            deleteOwner={this.deleteOwner} />
+                        return <ResourceList {...props}
+                            collection = "owners"
+
+                            resources={this.state.owners}
+                         />
                     } else {
                         return <Redirect to="/login" />
                     }

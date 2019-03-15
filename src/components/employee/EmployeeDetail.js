@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import AnimalCard from "../animal/AnimalCard"
+import ResourceCard from "../generics/ResourceCard"
 
 
 
@@ -27,10 +27,11 @@ export default class EmployeeDetail extends Component {
                             }}>Edit</button>
                               <section> Current animals in care:
                                     {this.props.animals.filter(animal => animal.employeeId === employee.id).map(matchingAnimal =>
-                                    <AnimalCard
+                                    <ResourceCard
                                     {...this.props}
                                     key={matchingAnimal.id}
-                                    animal={matchingAnimal}
+                                    resource={matchingAnimal}
+                                    route="animals"
                                     /> )}
                                 </section>
                     </div>

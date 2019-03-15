@@ -23,7 +23,8 @@ export default class EmployeeEditForm extends Component {
           id: this.props.match.params.employeeId,
           name: this.state.employeeName,
           title: this.state.employeeTitle,
-
+          image: this.state.employeeeImage,
+          locationId: this.state.workplace
         };
 
     this.props.updateEmployee(editedEmployee)
@@ -37,6 +38,9 @@ export default class EmployeeEditForm extends Component {
          employeeName: employee.name,
           employeeTitle: employee.title,
           id: employee.id,
+          employeeeImage: employee.image,
+          workplace: employee.locationId
+
         });
       });
     }

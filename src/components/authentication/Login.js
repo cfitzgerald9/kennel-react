@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import "../animal/Animal.css"
 
 export default class Login extends Component {
 
@@ -30,7 +31,7 @@ export default class Login extends Component {
 
   render(){
         return (
-            <form onSubmit={this.handleLogin }>
+            <form onSubmit={this.handleLogin } className="loginForm">
                 <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
                 <label htmlFor="inputEmail">
                     Email address
